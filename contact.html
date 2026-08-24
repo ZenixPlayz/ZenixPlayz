@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenixPlayz | Contact Hub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #020617; color: #f1f5f9; overflow-x: hidden; min-height: 100vh; }
+        
+        .cyber-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: linear-gradient(125deg, #020617, #09090b, #1e1b4b, #311033);
+            background-size: 400% 400%;
+            animation: gradientShift 10s ease infinite;
+        }
+        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center; padding: 20px 50px;
+            background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 234, 255, 0.2); position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #00eaff; text-shadow: 0 0 10px rgba(0, 234, 255, 0.6); }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
+
+        .container { max-width: 800px; margin: 50px auto; padding: 0 20px; }
+        .section-title {
+            font-size: 2.5rem; color: #00eaff; margin-bottom: 20px; text-align: center;
+            text-transform: uppercase; letter-spacing: 3px; position: relative;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 80px; height: 4px; background: #00eaff;
+            margin: 12px auto 0; box-shadow: 0 0 12px #00eaff; border-radius: 2px;
+        }
+        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1.1rem; }
+
+        .contact-box {
+            background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(0, 234, 255, 0.3);
+            border-radius: 16px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.7); backdrop-filter: blur(10px);
+        }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; color: #94a3b8; margin-bottom: 8px; font-weight: 600; }
+        .form-control {
+            width: 100%; padding: 12px 15px; background: rgba(2, 6, 23, 0.9);
+            border: 1px solid #1e293b; border-radius: 8px; color: #fff; font-size: 1rem;
+            outline: none; transition: 0.3s;
+        }
+        .form-control:focus { border-color: #00eaff; box-shadow: 0 0 10px rgba(0, 234, 255, 0.3); }
+        textarea.form-control { resize: vertical; min-height: 130px; }
+        
+        .submit-btn {
+            width: 100%; background: linear-gradient(90deg, #00eaff, #0055ff); color: #020617;
+            border: none; padding: 14px; font-size: 1.1rem; font-weight: bold; border-radius: 8px;
+            cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .submit-btn:hover { box-shadow: 0 0 20px #00eaff; transform: translateY(-2px); }
+
+        .direct-email {
+            text-align: center; margin-top: 30px; color: #cbd5e1; font-size: 1rem;
+        }
+        .direct-email a { color: #00eaff; text-decoration: none; font-weight: bold; }
+
+        footer { text-align: center; padding: 40px; background: rgba(1, 4, 9, 0.9); color: #64748b; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 80px; }
+
+        @media(max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 15px; font-size: 0.85rem; }
+            .contact-box { padding: 20px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cyber-bg"></div>
+
+    <nav>
+        <div class="logo">ZENIXPLAYZ</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="arsenal.html">Arsenal</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="subtitle">Have a collaboration query, technical issue, or business proposal? Drop a message below!</p>
+        
+        <div class="contact-box">
+            <!-- Form directs submissions straight to your email zenixplayz12@gmail.com -->
+            <form action="https://formsubmit.co/zenixplayz12@gmail.com" method="POST">
+                
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label>Your Name / Gamer Tag</label>
+                    <input type="text" name="Name" class="form-control" placeholder="Enter your name..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Email Address</label>
+                    <input type="email" name="Email" class="form-control" placeholder="Enter your email so I can reply..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Inquiry Subject / Category</label>
+                    <select name="Subject" class="form-control" required>
+                        <option value="General Message">General Message / Chat</option>
+                        <option value="Content Creation Collab">Content Creation Collaboration</option>
+                        <option value="PC Optimization Support">PC Performance / Optimization Help</option>
+                        <option value="Custom Server / Match Inquiry">Custom Server / Match Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Message / Details</label>
+                    <textarea name="Message" class="form-control" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+            
+            <div class="direct-email">
+                Or mail me directly at: <a href="mailto:zenixplayz12@gmail.com">zenixplayz12@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ZenixPlayz Official. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
