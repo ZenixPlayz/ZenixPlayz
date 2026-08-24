@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenixPlayz | Official Nexus</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* --- KHATARNAK DYNAMIC ANIMATED BACKGROUND --- */
+        body {
+            background: #020617;
+            color: #f1f5f9;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .cyber-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: linear-gradient(125deg, #020617, #09090b, #1e1b4b, #311033);
+            background-size: 400% 400%;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glowing Floating Orbs Background Effect */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: floatOrb 8s infinite alternate ease-in-out;
+        }
+        .orb-1 { width: 350px; height: 350px; background: #00eaff; top: 10%; left: 10%; }
+        .orb-2 { width: 400px; height: 400px; background: #ff0055; bottom: 10%; right: 10%; animation-delay: 4s; }
+
+        @keyframes floatOrb {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-50px) scale(1.1); }
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 234, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00eaff;
+            text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        /* --- HERO HEADER --- */
+        header {
+            padding: 100px 20px 60px 20px;
+            text-align: center;
+        }
+        .avatar-glow {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00eaff;
+            background: rgba(15, 23, 42, 0.9);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 30px auto;
+            font-size: 4rem;
+            box-shadow: 0 0 40px rgba(0, 234, 255, 0.6);
+            animation: pulseGlow 2s infinite alternate;
+        }
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 20px rgba(0, 234, 255, 0.4); transform: scale(1); }
+            to { box-shadow: 0 0 50px rgba(0, 234, 255, 0.9); transform: scale(1.03); }
+        }
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px #00eaff, 0 0 40px #0055ff;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+            line-height: 1.7;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: rgba(0, 234, 255, 0.05);
+            color: #00eaff;
+            border: 2px solid #00eaff;
+            padding: 12px 28px;
+            border-radius: 35px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+            display: inline-flex; align-items: center; gap: 10px;
+        }
+        .btn:hover {
+            background: #00eaff;
+            color: #020617;
+            box-shadow: 0 0 25px #00eaff, 0 0 50px #00eaff;
+            transform: translateY(-4px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(1, 4, 9, 0.9);
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        @media(max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cyber-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <nav>
+        <div class="logo">ZENIXPLAYZ</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="arsenal.html">Arsenal</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="avatar-glow">⚡</div>
+        <h1>ZenixPlayz</h1>
+        <p class="tagline">🔥 Welcome to ZenixPlayz Official! 🚀 The ultimate hub for competitive gaming 🎮, advanced PC performance tuning 💻, and high-octane content creation 🎬⚡</p>
+        
+        <div class="btn-container">
+            <a href="https://www.youtube.com/@ZenixPlayzLive" target="_blank" class="btn"><i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube</a>
+            <a href="https://www.instagram.com/zenixplayzlive?igsi=ZXEwcDRmZ2VrajQ=" target="_blank" class="btn"><i class="fab fa-instagram" style="color: #e1306c;"></i> Instagram</a>
+            <a href="https://discord.gg/e6MpGEgqPQ" target="_blank" class="btn"><i class="fab fa-discord" style="color: #5865F2;"></i> Discord</a>
+            <a href="https://github.com/azyrjxyaz-web" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </header>
+
+    <footer>
+        <p>&copy; 2026 ZenixPlayz Official. All Rights Reserved. Extreme Gaming Ecosystem.</p>
+    </footer>
+
+</body>
+</html>
