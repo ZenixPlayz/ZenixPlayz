@@ -21,7 +21,9 @@
             background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0, 234, 255, 0.2); position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #00eaff; text-shadow: 0 0 10px rgba(0, 234, 255, 0.6); }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #00eaff; text-shadow: 0 0 10px rgba(0, 234, 255, 0.6); display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 35px; width: auto; object-fit: contain; } /* Logo image support */
+        
         .nav-links { display: flex; gap: 25px; }
         .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
@@ -62,7 +64,10 @@
     <div class="cyber-bg"></div>
 
     <nav>
-        <div class="logo">ZENIXPLAYZ</div>
+        <div class="logo">
+            <!-- Jab tera naya logo aayega, yahan img tag lag jayega -->
+            ZENIXPLAYZ
+        </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="arsenal.html">Arsenal</a>
@@ -74,6 +79,12 @@
     <div class="container">
         <h2 class="section-title">Core Projects</h2>
         <div class="grid">
+            <!-- Naya Project Card (AuraBot hata kar) -->
+            <div class="card">
+                <h3><i class="fas fa-microchip" style="color: #ff0055;"></i> Advanced Performance Scripts</h3>
+                <p>Developing custom registry tweaks, system optimization toolkits, and latency-reduction configurations designed to squeeze maximum FPS out of competitive gaming rigs.</p>
+            </div>
+
             <div class="card">
                 <h3><i class="fas fa-globe" style="color: #ff0055;"></i> Custom Multiplayer Worlds</h3>
                 <p>Architecting, optimizing, and maintaining high-performance custom server networks, crafting thrilling gameplay experiences and live community events.</p>
