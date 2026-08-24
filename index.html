@@ -26,7 +26,9 @@
             background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0, 234, 255, 0.2); position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #00eaff; text-shadow: 0 0 10px rgba(0, 234, 255, 0.6); letter-spacing: 2px; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #00eaff; text-shadow: 0 0 10px rgba(0, 234, 255, 0.6); letter-spacing: 2px; display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 35px; width: auto; object-fit: contain; }
+
         .nav-links { display: flex; gap: 25px; }
         .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
@@ -71,7 +73,9 @@
     <div class="orb orb-2"></div>
 
     <nav>
-        <div class="logo">ZENIXPLAYZ</div>
+        <div class="logo">
+            ZENIXPLAYZ
+        </div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="arsenal.html">Arsenal</a>
