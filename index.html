@@ -31,7 +31,7 @@
         .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
 
-        header { padding: 90px 20px 50px 20px; text-align: center; }
+        header { padding: 120px 20px; text-align: center; }
         .avatar-glow {
             width: 150px; height: 150px; border-radius: 50%; border: 3px solid #00eaff;
             background: rgba(15, 23, 42, 0.9); display: flex; align-items: center; justify-content: center;
@@ -45,7 +45,7 @@
         h1 { font-size: 4rem; color: #fff; text-transform: uppercase; letter-spacing: 6px; margin-bottom: 15px; text-shadow: 0 0 20px #00eaff, 0 0 40px #0055ff; }
         .tagline { font-size: 1.2rem; color: #cbd5e1; max-width: 750px; margin: 0 auto 35px auto; line-height: 1.7; }
 
-        .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+        .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px; }
         .btn {
             background: rgba(0, 234, 255, 0.05); color: #00eaff; border: 2px solid #00eaff;
             padding: 12px 28px; border-radius: 35px; font-weight: bold; text-decoration: none;
@@ -54,36 +54,12 @@
         }
         .btn:hover { background: #00eaff; color: #020617; box-shadow: 0 0 25px #00eaff, 0 0 50px #00eaff; transform: translateY(-4px); }
 
-        /* --- TICKET / CONTACT SECTION --- */
-        .contact-section {
-            max-width: 700px; margin: 0 auto; background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(0, 234, 255, 0.3); border-radius: 16px; padding: 40px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7); backdrop-filter: blur(10px);
-        }
-        .contact-section h2 { color: #00eaff; text-align: center; margin-bottom: 25px; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px; }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; color: #94a3b8; margin-bottom: 8px; font-weight: 600; }
-        .form-control {
-            width: 100%; padding: 12px 15px; background: rgba(2, 6, 23, 0.9);
-            border: 1px solid #1e293b; border-radius: 8px; color: #fff; font-size: 1rem;
-            outline: none; transition: 0.3s;
-        }
-        .form-control:focus { border-color: #00eaff; box-shadow: 0 0 10px rgba(0, 234, 255, 0.3); }
-        textarea.form-control { resize: vertical; min-height: 120px; }
-        .submit-btn {
-            width: 100%; background: linear-gradient(90deg, #00eaff, #0055ff); color: #020617;
-            border: none; padding: 14px; font-size: 1.1rem; font-weight: bold; border-radius: 8px;
-            cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
-        }
-        .submit-btn:hover { box-shadow: 0 0 20px #00eaff; transform: translateY(-2px); }
-
         footer { text-align: center; padding: 40px; background: rgba(1, 4, 9, 0.9); color: #64748b; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 80px; }
 
         @media(max-width: 768px) {
             h1 { font-size: 2.5rem; }
             nav { padding: 15px 20px; }
             .nav-links { gap: 15px; font-size: 0.9rem; }
-            .contact-section { padding: 20px; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -100,6 +76,7 @@
             <a href="index.html" class="active">Home</a>
             <a href="arsenal.html">Arsenal</a>
             <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -112,68 +89,13 @@
             <a href="https://www.youtube.com/@ZenixPlayzLive" target="_blank" class="btn"><i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube</a>
             <a href="https://www.instagram.com/zenixplayzlive?igsi=ZXEwcDRmZ2VrajQ=" target="_blank" class="btn"><i class="fab fa-instagram" style="color: #e1306c;"></i> Instagram</a>
             <a href="https://discord.gg/e6MpGEgqPQ" target="_blank" class="btn"><i class="fab fa-discord" style="color: #5865F2;"></i> Discord</a>
-        </div>
-
-        <!-- TICKET / INQUIRY FORM DIRECT TO YOUR EMAIL -->
-        <div class="contact-section">
-            <h2><i class="fas fa-ticket-alt" style="color: #00eaff;"></i> Open Support Ticket / Inquiry</h2>
-            <!-- Replace 'zenixplayzlive@gmail.com' with your actual email if needed -->
-            <form action="https://formsubmit.co/zenixplayzlive@gmail.com" method="POST">
-                
-                <!-- Anti-spam honeypot -->
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-
-                <div class="form-group">
-                    <label>Your Name / Gamer Tag</label>
-                    <input type="text" name="Name" class="form-control" placeholder="Enter your name..." required>
-                </div>
-
-                <div class="form-group">
-                    <label>Select Inquiry Category</label>
-                    <select name="Category" id="categorySelect" class="form-control" onchange="updateTicketPrompt()" required>
-                        <option value="General Inquiry">General Inquiry / Chat</option>
-                        <option value="Content Creation Collab">Content Creation Collaboration</option>
-                        <option value="PC Optimization Help">PC Performance & Tuning Help</option>
-                        <option value="Custom Server / Gaming">Competitive Gaming / Server Match</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label id="reasonLabel">Detailed Reason / Message</label>
-                    <textarea name="Message" id="reasonMessage" class="form-control" placeholder="Explain your project, collab idea, or issue in detail..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Ticket</button>
-            </form>
+            <a href="contact.html" class="btn" style="background: rgba(0, 234, 255, 0.15);"><i class="fas fa-envelope" style="color: #00eaff;"></i> Contact Me</a>
         </div>
     </header>
 
     <footer>
         <p>&copy; 2026 ZenixPlayz Official. All Rights Reserved. Extreme Gaming Ecosystem.</p>
     </footer>
-
-    <script>
-        function updateTicketPrompt() {
-            const cat = document.getElementById('categorySelect').value;
-            const label = document.getElementById('reasonLabel');
-            const textarea = document.getElementById('reasonMessage');
-
-            if(cat === 'Content Creation Collab') {
-                label.innerText = "Content Creation Details (Channel Link & Collab Idea):";
-                textarea.placeholder = "Mention your channel type, subscriber count, and what kind of video/stream collab you want...";
-            } else if(cat === 'PC Optimization Help') {
-                label.innerText = "PC Specifications & Issue Description:";
-                textarea.placeholder = "Mention your CPU, GPU, RAM and what FPS drop or optimization issue you are facing...";
-            } else if(cat === 'Custom Server / Gaming') {
-                label.innerText = "Gaming / Match / Server Details:";
-                textarea.placeholder = "Mention which game you play, your rank, or what custom match/event you want to join...";
-            } else {
-                label.innerText = "Detailed Reason / Message:";
-                textarea.placeholder = "Explain your project, collab idea, or issue in detail...";
-            }
-        }
-    </script>
 
 </body>
 </html>
